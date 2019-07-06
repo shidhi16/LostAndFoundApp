@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="-220" y="29"/>
         </scene>
-        <!--Signup View Controller-->
+        <!--Title-->
         <scene sceneID="3yc-Gw-i4s">
             <objects>
                 <viewController storyboardIdentifier="signupVC" id="bzw-Mg-1LY" customClass="SignupViewController" customModule="LostAndFoundApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,22 +96,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3W-XJ-ijw">
-                                <rect key="frame" x="151" y="94" width="116" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xlN-hq-MF5">
-                                <rect key="frame" x="101" y="174" width="155" height="30"/>
+                                <rect key="frame" x="101" y="174" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEJ-5y-aZ3">
-                                <rect key="frame" x="101" y="227" width="155" height="30"/>
+                                <rect key="frame" x="101" y="227" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -130,6 +123,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txt_dobClick:" destination="bzw-Mg-1LY" eventType="editingDidEnd" id="ifM-ga-iX8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5I-jv-JEB">
                                 <rect key="frame" x="101" y="382" width="155" height="30"/>
@@ -159,15 +155,64 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="om3-ex-Nrn">
-                                <rect key="frame" x="151" y="589" width="54" height="30"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-Nn-au1">
+                                <rect key="frame" x="41" y="700" width="333" height="147"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="584136509.51558805">
+                                    <!--2019-07-06 20:08:29 +0000-->
+                                </date>
+                            </datePicker>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9R7-wP-Q34">
+                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sign Up" id="KQY-eq-0Jl">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="av0-7H-a79">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Lh-Dp-VUM">
+                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="btnBack:" destination="bzw-Mg-1LY" id="vkg-I3-geL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="eba-Dz-Qlq">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="om3-ex-Nrn">
+                                                <rect key="frame" x="360" y="7" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="btn_save:" destination="bzw-Mg-1LY" id="V2H-WM-5M6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5e-07-h4j">
+                                <rect key="frame" x="57" y="117" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backbtn:" destination="bzw-Mg-1LY" eventType="touchUpInside" id="iic-Sh-YFK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LJ2-9H-RjC"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="CXe-19-IYg"/>
+                    <connections>
+                        <outlet property="txt_address" destination="JGh-yp-k5l" id="6MW-nO-tOf"/>
+                        <outlet property="txt_city" destination="73r-n8-QHG" id="qKH-Wm-mxB"/>
+                        <outlet property="txt_contactNo" destination="UwP-Se-WlF" id="dUN-W2-Gcd"/>
+                        <outlet property="txt_dob" destination="Jvc-AW-sIv" id="F49-nJ-ZsX"/>
+                        <outlet property="txt_emailIDsignup" destination="JhP-ML-GPG" id="MAx-Yl-SrY"/>
+                        <outlet property="txt_firstName" destination="xlN-hq-MF5" id="7GS-bB-c2P"/>
+                        <outlet property="txt_lastName" destination="IEJ-5y-aZ3" id="0LD-QP-yVV"/>
+                        <outlet property="txt_passwordSignup" destination="c5I-jv-JEB" id="oW2-ha-1up"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uU9-lJ-qrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
