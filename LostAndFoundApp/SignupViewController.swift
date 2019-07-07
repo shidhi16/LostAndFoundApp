@@ -39,10 +39,6 @@ class SignupViewController: UIViewController {
     {
     
     }
-    @IBAction func btnBack(_ sender: Any)
-    {
-        
-    }
     
     @IBAction func backbtn(_ sender: Any)
     {
@@ -50,10 +46,7 @@ class SignupViewController: UIViewController {
         let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.present(nextVC, animated: true, completion: nil)
     }
-    @IBAction func btn_Back(_ sender: Any) {
-       
-    
-    }
+  
     
     @IBAction func btn_back(_ sender: UIBarButtonItem)
     { let secVC = storyboard!.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
