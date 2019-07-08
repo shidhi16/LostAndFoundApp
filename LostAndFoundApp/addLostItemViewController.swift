@@ -12,7 +12,16 @@ class addLostItemViewController: UIViewController
 {
 
     
+    @IBOutlet weak var txt_itemName: UITextField!
+    @IBOutlet weak var txt_category: UITextField!
     
+    @IBOutlet weak var txt_place: UITextField!
+    
+    @IBOutlet weak var txt_dateLostItem: UITextField!
+    @IBOutlet weak var txt_reward: UITextField!
+    @IBOutlet weak var txt_description: UITextField!
+    
+    @IBOutlet weak var img_item: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +29,11 @@ class addLostItemViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btn_saveLostItem(_ sender: UIButton)
+    {
+    
+    
     }
-    */
-
+    
+    
 }
