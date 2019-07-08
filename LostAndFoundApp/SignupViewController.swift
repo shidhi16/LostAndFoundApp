@@ -99,32 +99,25 @@ class SignupViewController: UIViewController, UINavigationBarDelegate,UINavigati
 */
     
     
-    @IBAction func btn_save(_ sender: UIBarButtonItem)
-    {
-        let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-        self.present(nextVC, animated: true, completion: nil)
-    }
+   
     
     @IBAction func txt_dobClick(_ sender: UITextField)
     {
      self.date_picker()
     }
     
-    @IBAction func backbtn(_ sender: Any)
+   
+    @IBAction func btn_Back(_ sender: UIBarButtonItem)
     {
         let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.present(nextVC, animated: true, completion: nil)
-    }
-  
     
-    @IBAction func btn_back(_ sender: UIBarButtonItem)
-    { let secVC = storyboard!.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-        
-        self.navigationController?.pushViewController(secVC, animated: true)
-      
     }
+    
+ 
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

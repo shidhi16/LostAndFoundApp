@@ -29,6 +29,13 @@ class addLostItemViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btn_back(_ sender: Any) {
+    
+        let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        self.present(nextVC, animated: true, completion: nil)
+    
+    }
     @IBAction func btn_saveLostItem(_ sender: UIButton)
     {
     

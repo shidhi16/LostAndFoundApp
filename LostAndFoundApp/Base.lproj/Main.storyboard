@@ -160,37 +160,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Sign Up" id="KQY-eq-0Jl">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="av0-7H-a79">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Lh-Dp-VUM">
-                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="cP8-ru-v8b">
                                             <connections>
-                                                <action selector="btn_back:" destination="bzw-Mg-1LY" id="IT7-2Y-SIe"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="eba-Dz-Qlq">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="om3-ex-Nrn">
-                                                <rect key="frame" x="360" y="7" width="34" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Save"/>
-                                            </button>
-                                            <connections>
-                                                <action selector="btn_save:" destination="bzw-Mg-1LY" id="V2H-WM-5M6"/>
+                                                <action selector="btn_Back:" destination="bzw-Mg-1LY" id="uLU-aS-8Zg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5e-07-h4j">
-                                <rect key="frame" x="57" y="117" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="back"/>
-                                <connections>
-                                    <action selector="backbtn:" destination="bzw-Mg-1LY" eventType="touchUpInside" id="iic-Sh-YFK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LJ2-9H-RjC"/>
@@ -266,7 +243,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Lost Item" id="VqR-YW-hGX"/>
+                                    <navigationItem title="Lost Item" id="VqR-YW-hGX">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="ADH-gM-4gJ">
+                                            <connections>
+                                                <action selector="btn_back:" destination="EZV-hm-Rqq" id="u3h-BY-cmh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tp-ME-b8D">
