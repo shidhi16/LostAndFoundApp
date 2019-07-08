@@ -44,7 +44,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = true
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!); self.navigationController?.navigationBar.isHidden = true
         self.menuview.frame = CGRect(x: 0 - self.menuview.bounds.width, y: self.menuview.frame.origin.y, width:self.menuview.bounds.width, height: self.menuview.bounds.height)
         
         // Do any additional setup after loading the view.
