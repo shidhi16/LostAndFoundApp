@@ -23,10 +23,7 @@ class MenuViewController: UIViewController {
         {
             UIView.animate(withDuration: 0.4, animations:{
                 self.menuview.frame = CGRect(x: self.menuview.frame.origin.x + self.menuview.bounds.width, y: self.menuview.frame.origin.y, width:self.menuview.bounds.width, height: self.menuview.bounds.height)
-                
-                //                UIView.animateWithDuration(0.4, animations:{
-                //                    self.slideview.frame = CGRect(x: self.slideview.frame.origin.x - self.slideview.bounds.width, y: self.slideview.frame.origin.y, width:self.slideview.bounds.width, height: self.slideview.bounds.height)
-                //            print(self.slideview.frame.origin.x)
+            
                 
             })
             i=1
@@ -35,11 +32,7 @@ class MenuViewController: UIViewController {
             UIView.animate(withDuration: 0.4, animations:{
                 self.menuview.frame = CGRect(x: self.menuview.frame.origin.x - self.menuview.bounds.width, y: self.menuview.frame.origin.y, width:self.menuview.bounds.width, height: self.menuview.bounds.height)
                 
-                //
-                //            UIView.animateWithDuration(0.4, animations:{
-                //                self.slideview.frame = CGRect(x: self.slideview.frame.origin.x + self.slideview.bounds.width, y: self.slideview.frame.origin.y, width:self.slideview.bounds.width, height: self.slideview.bounds.height)
-                
-                //
+            
             })
             i=0
             print(self.menuview .frame.origin.x)
