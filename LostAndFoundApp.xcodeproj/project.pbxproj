@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB01EB9722DCF06E006DF4ED /* userInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB01EB9622DCF06E006DF4ED /* userInfo.plist */; };
+		EB01EB9A22DCF34A006DF4ED /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9922DCF34A006DF4ED /* userData.swift */; };
 		EB7D450B22DA63A800FD69B2 /* demoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D450A22DA63A800FD69B2 /* demoViewController.swift */; };
 		EBC6255822D01928001C83B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255722D01928001C83B5 /* AppDelegate.swift */; };
 		EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255922D01928001C83B5 /* LoginViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		EB01EB9622DCF06E006DF4ED /* userInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userInfo.plist; sourceTree = "<group>"; };
+		EB01EB9922DCF34A006DF4ED /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		EB7D450A22DA63A800FD69B2 /* demoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoViewController.swift; sourceTree = "<group>"; };
 		EBC6255422D01928001C83B5 /* LostAndFoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC6255722D01928001C83B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB01EB9822DCF32A006DF4ED /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				EB01EB9922DCF34A006DF4ED /* userData.swift */,
+			);
+			path = "Swift files";
+			sourceTree = "<group>";
+		};
 		EBC6254B22D01928001C83B5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		EBC6255622D01928001C83B5 /* LostAndFoundApp */ = {
 			isa = PBXGroup;
 			children = (
+				EB01EB9822DCF32A006DF4ED /* Swift files */,
 				EBC6255722D01928001C83B5 /* AppDelegate.swift */,
 				EBC6256922D01FE1001C83B5 /* MenuViewController.swift */,
 				EBC6255922D01928001C83B5 /* LoginViewController.swift */,
@@ -154,6 +165,7 @@
 				EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */,
 				EBC6256A22D01FE1001C83B5 /* MenuViewController.swift in Sources */,
 				EBC6256C22D02021001C83B5 /* SignupViewController.swift in Sources */,
+				EB01EB9A22DCF34A006DF4ED /* userData.swift in Sources */,
 				EBF1831A22D2DCF500EC112D /* addLostItemViewController.swift in Sources */,
 				EBC6255822D01928001C83B5 /* AppDelegate.swift in Sources */,
 				EB7D450B22DA63A800FD69B2 /* demoViewController.swift in Sources */,

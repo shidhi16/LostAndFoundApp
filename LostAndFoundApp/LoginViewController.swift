@@ -19,6 +19,12 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var switchRememberMe: UISwitch!
     
+    var UsersDict = [UsersStruct]()
+    
+    // getting user defaults reference
+    let userDefault = UserDefaults.standard
+    
+    
     @IBAction func btnSignup(_ sender: UIButton)
     {
         let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -43,70 +49,124 @@ class LoginViewController: UIViewController {
     }
     @IBAction func btnLogin(_ sender: UIButton)
     {
-        if self.txt_emailId.text == "admin@gmail.com" && self.txtPassword.text == "s3cr3t"
-        {
-            let userDefault = UserDefaults.standard
-            if switchRememberMe.isOn
-            {
+        if let email = txt_emailId.text{
+            if !email.isEmpty{
                 
-                userDefault.setValue(txt_emailId.text, forKey: "userEmail")
-                userDefault.set(txtPassword.text, forKey: "userPassword")
-                let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
-                self.present(nextVC, animated: true, completion: nil)
+                if email.isVAlidEmail(){
+                    if let password = txtPassword.text{
+                        if !password.isEmpty{
+                            if password{
+                                
+                                if  checkEmailPassword(email: email, password: password) {
+                                    setRememberMe()
+                                    
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let dashboardVC = storyboard.instantiateViewController(withIdentifier: "customerListVC") as! MenuViewController
+                                    
+                                    self.navigationController?.pushViewController(dashboardVC, animated: true)
+                                    
+                                    
+                                }else{
+                                    showAlerBox(msg: "You have enter wrong credentials")
+                                }
+                                
+                            }else{
+                                showAlerBox(msg: "Invalid password size")
+                            }
+                            
+                        }else{
+                            showAlerBox(msg: "Please enter password")
+                        }
+                    }
+                }
+                else{
+                    showAlerBox(msg: "Please enter valid email")
+                }
+            }else{
+                showAlerBox(msg: "Please enter useremail")
             }
-            else
-            {
-                userDefault.removeObject(forKey: "userEmail")
-                userDefault.removeObject(forKey: "userPassword")
-            }
-        }
-        else
-        {
-            let alert = UIAlertController(title: "Error", message: "Try again, User Email / Password Invalid", preferredStyle: .alert)
-            
-            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            
-            alert.addAction(okButton)
-            
-            self.present(alert, animated: true)
         }
     }
-    /*
-        func validateUser()
-        {
-            if(txt_emailId.text == "admin@gmail.com" && txtPassword.text == "admin123")
-            {
-           
-                let myStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = myStoryBoard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
-                self.present(nextVC, animated: true, completion: nil)
-                
-            }
-            else
-            {
-                
-                let alert  =
-                    UIAlertController(title: "Error", message: "User Email / Password incorrect", preferredStyle: UIAlertController.Style.alert)
-               
-                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-                
+        func showAlerBox(msg : String)  {
+            let alertController = UIAlertController(title: "CustomerBillApp", message:
+                msg, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             
-                alert.addAction(actionOk)
-                
-              
-                self.present(alert, animated: true, completion: nil)
-            }
+            self.present(alertController, animated: true, completion: nil)
         }
         
         
+        func readCustomersPlistFile(){
+            
+            let plist = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
+            
+            if let dict = NSMutableDictionary(contentsOfFile: plist!){
+                if let Customers = dict["Users"] as? [[String:Any]]
+                {
+                    for customer in Customers {
+                        let id = customer["userID"] as! Int
+                        let firstName = customer["userName"] as! String
+                        
+                        let email = customer["email"] as! String
+                        let password = customer["password"] as! String
+                        
+                        self.UsersDict.append(UsersStruct(userID: id, userName: firstName, email: email, password: password))
+                    }
+                }
+            }
+            
+        }
+        
+        
+        
+        func checkEmailPassword(email : String , password : String) -> Bool{
+            
+            for everyCustomer in UsersDict{
+                if (everyCustomer.email == email && everyCustomer.password == password) {
+                    return true
+                }
+            }
+            return false
+        }
+        
+        func setRememberMe()  {
+            if switch_rememberMe.isOn {
+                userDefault.set(self.txt_emailID.text, forKey: "email")
+                userDefault.set(self.txt_password.text, forKey: "password")
+            }else{
+                userDefault.set("", forKey: "email")
+                userDefault.set("", forKey: "password")
+            }
+        }
+        
+        func getRememberMe()
+        {
+            let userDefault = UserDefaults.standard
+            
+            if let email = userDefault.string(forKey: "email")
+            {
+                txt_emailId.text = email
+                
+                if let password = userDefault.string(forKey: "password")
+                {
+                    txtPassword.text = password
+                    switchRememberMe.setOn(true, animated: false)
+                }
+            }
+        }
+        
     
     
-    */
+ 
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
+        
+        switchRememberMe.isOn = false
+        getRememberMe()
+        readCustomersPlistFile()
         super.viewDidLoad()
-        getRememberMeValues()
+      
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!)
         
     }
