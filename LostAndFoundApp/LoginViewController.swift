@@ -104,13 +104,12 @@ class LoginViewController: UIViewController {
                 if let Customers = dict["Users"] as? [[String:Any]]
                 {
                     for customer in Customers {
-                        let id = customer["userID"] as! Int
-                        let firstName = customer["userName"] as! String
+                      
                         
-                        let email = customer["email"] as! String
+                        let email = customer["emailID"] as! String
                         let password = customer["password"] as! String
                         
-                        self.UsersDict.append(UsersStruct(userID: id, userName: firstName, email: email, password: password))
+                        self.UsersDict.append(UsersStruct(email: email, password: password))
                     }
                 }
             }
