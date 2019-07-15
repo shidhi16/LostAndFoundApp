@@ -57,7 +57,7 @@ self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!
                 }
                 else
                 {
-                    self.imageController.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+                    self.imageController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
                     self.imageController.sourceType = UIImagePickerController.SourceType.camera
                     self.imageController.allowsEditing = true
                     
@@ -85,7 +85,7 @@ self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!
             
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum)
             {
-                self.imageController.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+                self.imageController.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
                 self.imageController.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum;
                 self.imageController.allowsEditing = false
                 
@@ -104,7 +104,7 @@ self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!
         self.present(optionMenu, animated: true, completion: nil)
         
     }
-    
+    /*
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         img_item.image = image
@@ -142,7 +142,7 @@ self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!
         imageController.dismiss(animated: true, completion: nil)
     }
     
-    
+    */
     
     
     
