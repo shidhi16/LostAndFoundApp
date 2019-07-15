@@ -24,8 +24,6 @@ class Item
         self.itemName = String()
         self.description = String()
         
-       
-        
     }
     
     init(itemID:Int, itemCategory : String, itemName :String, description : String)

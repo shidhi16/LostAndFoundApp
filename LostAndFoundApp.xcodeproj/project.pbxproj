@@ -12,6 +12,7 @@
 		EB01EB9D22DCF43C006DF4ED /* String_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9C22DCF43C006DF4ED /* String_extension.swift */; };
 		EB01EB9F22DCF7C3006DF4ED /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9E22DCF7C3006DF4ED /* Item.swift */; };
 		EB01EBA122DCF914006DF4ED /* lostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EBA022DCF914006DF4ED /* lostItem.swift */; };
+		EB01EBA322DD01BD006DF4ED /* ShowAllLostItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EBA222DD01BD006DF4ED /* ShowAllLostItemsViewController.swift */; };
 		EB7D450B22DA63A800FD69B2 /* demoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D450A22DA63A800FD69B2 /* demoViewController.swift */; };
 		EBC6255822D01928001C83B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255722D01928001C83B5 /* AppDelegate.swift */; };
 		EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255922D01928001C83B5 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 		EB01EB9C22DCF43C006DF4ED /* String_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_extension.swift; sourceTree = "<group>"; };
 		EB01EB9E22DCF7C3006DF4ED /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EB01EBA022DCF914006DF4ED /* lostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostItem.swift; sourceTree = "<group>"; };
+		EB01EBA222DD01BD006DF4ED /* ShowAllLostItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllLostItemsViewController.swift; sourceTree = "<group>"; };
 		EB7D450A22DA63A800FD69B2 /* demoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoViewController.swift; sourceTree = "<group>"; };
 		EBC6255422D01928001C83B5 /* LostAndFoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC6255722D01928001C83B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				EBC6256B22D02021001C83B5 /* SignupViewController.swift */,
 				EB7D450A22DA63A800FD69B2 /* demoViewController.swift */,
 				EB01EB9622DCF06E006DF4ED /* userInfo.plist */,
+				EB01EBA222DD01BD006DF4ED /* ShowAllLostItemsViewController.swift */,
 			);
 			path = LostAndFoundApp;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB01EBA322DD01BD006DF4ED /* ShowAllLostItemsViewController.swift in Sources */,
 				EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */,
 				EB01EB9F22DCF7C3006DF4ED /* Item.swift in Sources */,
 				EBC6256A22D01FE1001C83B5 /* MenuViewController.swift in Sources */,

@@ -86,6 +86,42 @@
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="28.794642857142854"/>
         </scene>
+        <!--Show All Lost Items View Controller-->
+        <scene sceneID="TJ7-dX-1AY">
+            <objects>
+                <viewController storyboardIdentifier="AllLostItemVC" id="388-Sf-9aU" customClass="ShowAllLostItemsViewController" customModule="LostAndFoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJf-Dx-PW0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQc-57-Yr8">
+                                <rect key="frame" x="0.0" y="89" width="414" height="798"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellLostItems" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="178" id="K3B-bc-8ez">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="178"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K3B-bc-8ez" id="mBo-vY-KzI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="177.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qMM-38-8zZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cell_showLostItems" destination="KQc-57-Yr8" id="xoC-M2-jA2"/>
+                        <outlet property="tbl_showLostItems" destination="KQc-57-Yr8" id="3eZ-3r-5tm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMq-ZF-icL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="-515.625"/>
+        </scene>
         <!--Title-->
         <scene sceneID="3yc-Gw-i4s">
             <objects>
@@ -407,6 +443,9 @@
                                         <state key="normal" title="Lost Items ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="388-Sf-9aU" kind="showDetail" id="jfh-Sm-TMR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKS-k1-DRm">
                                         <rect key="frame" x="71" y="160" width="85" height="30"/>
