@@ -33,20 +33,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    private func getRememberMeValues()
-    {
-        let userDefault = UserDefaults.standard
-        
-        if let email = userDefault.string(forKey: "userEmail")
-        {
-            txt_emailId.text = email
-            
-            if let pwd = userDefault.string(forKey: "userPassword")
-            {
-                txtPassword.text = pwd
-            }
-        }
-    }
+   
     @IBAction func btnLogin(_ sender: UIButton)
     {
         if let email = txt_emailId.text{
@@ -55,13 +42,13 @@ class LoginViewController: UIViewController {
                 if email.isVAlidEmail(){
                     if let password = txtPassword.text{
                         if !password.isEmpty{
-                            if password{
+                            if password.sizeCheck(){
                                 
                                 if  checkEmailPassword(email: email, password: password) {
                                     setRememberMe()
                                     
                                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let dashboardVC = storyboard.instantiateViewController(withIdentifier: "customerListVC") as! MenuViewController
+                                    let dashboardVC = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
                                     
                                     self.navigationController?.pushViewController(dashboardVC, animated: true)
                                     
@@ -88,7 +75,7 @@ class LoginViewController: UIViewController {
         }
     }
         func showAlerBox(msg : String)  {
-            let alertController = UIAlertController(title: "CustomerBillApp", message:
+            let alertController = UIAlertController(title: "Lost&FoundApp", message:
                 msg, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             
@@ -98,7 +85,7 @@ class LoginViewController: UIViewController {
         
         func readCustomersPlistFile(){
             
-            let plist = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
+            let plist = Bundle.main.path(forResource: "userInfo", ofType: "plist")
             
             if let dict = NSMutableDictionary(contentsOfFile: plist!){
                 if let Customers = dict["Users"] as? [[String:Any]]
@@ -108,8 +95,8 @@ class LoginViewController: UIViewController {
                         
                         let email = customer["emailID"] as! String
                         let password = customer["password"] as! String
-                        
                         self.UsersDict.append(UsersStruct(email: email, password: password))
+                       
                     }
                 }
             }
@@ -129,11 +116,11 @@ class LoginViewController: UIViewController {
         }
         
         func setRememberMe()  {
-            if switch_rememberMe.isOn {
-                userDefault.set(self.txt_emailID.text, forKey: "email")
-                userDefault.set(self.txt_password.text, forKey: "password")
+            if switchRememberMe.isOn {
+                userDefault.set(self.txt_emailId.text, forKey: "emailID")
+                userDefault.set(self.txtPassword.text, forKey: "password")
             }else{
-                userDefault.set("", forKey: "email")
+                userDefault.set("", forKey: "emailID")
                 userDefault.set("", forKey: "password")
             }
         }
@@ -142,11 +129,11 @@ class LoginViewController: UIViewController {
         {
             let userDefault = UserDefaults.standard
             
-            if let email = userDefault.string(forKey: "email")
+            if let email = userDefault.string(forKey: "emailID")
             {
                 txt_emailId.text = email
                 
-                if let password = userDefault.string(forKey: "password")
+                if let password = userDefault.string(forKey: "passwordID")
                 {
                     txtPassword.text = password
                     switchRememberMe.setOn(true, animated: false)

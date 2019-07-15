@@ -10,6 +10,8 @@
 		EB01EB9722DCF06E006DF4ED /* userInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB01EB9622DCF06E006DF4ED /* userInfo.plist */; };
 		EB01EB9A22DCF34A006DF4ED /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9922DCF34A006DF4ED /* userData.swift */; };
 		EB01EB9D22DCF43C006DF4ED /* String_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9C22DCF43C006DF4ED /* String_extension.swift */; };
+		EB01EB9F22DCF7C3006DF4ED /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EB9E22DCF7C3006DF4ED /* Item.swift */; };
+		EB01EBA122DCF914006DF4ED /* lostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01EBA022DCF914006DF4ED /* lostItem.swift */; };
 		EB7D450B22DA63A800FD69B2 /* demoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D450A22DA63A800FD69B2 /* demoViewController.swift */; };
 		EBC6255822D01928001C83B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255722D01928001C83B5 /* AppDelegate.swift */; };
 		EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6255922D01928001C83B5 /* LoginViewController.swift */; };
@@ -25,6 +27,8 @@
 		EB01EB9622DCF06E006DF4ED /* userInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userInfo.plist; sourceTree = "<group>"; };
 		EB01EB9922DCF34A006DF4ED /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		EB01EB9C22DCF43C006DF4ED /* String_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_extension.swift; sourceTree = "<group>"; };
+		EB01EB9E22DCF7C3006DF4ED /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EB01EBA022DCF914006DF4ED /* lostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostItem.swift; sourceTree = "<group>"; };
 		EB7D450A22DA63A800FD69B2 /* demoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoViewController.swift; sourceTree = "<group>"; };
 		EBC6255422D01928001C83B5 /* LostAndFoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC6255722D01928001C83B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				EB01EB9922DCF34A006DF4ED /* userData.swift */,
+				EB01EB9E22DCF7C3006DF4ED /* Item.swift */,
+				EB01EBA022DCF914006DF4ED /* lostItem.swift */,
 			);
 			path = "Swift files";
 			sourceTree = "<group>";
@@ -174,12 +180,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC6255A22D01928001C83B5 /* LoginViewController.swift in Sources */,
+				EB01EB9F22DCF7C3006DF4ED /* Item.swift in Sources */,
 				EBC6256A22D01FE1001C83B5 /* MenuViewController.swift in Sources */,
 				EBC6256C22D02021001C83B5 /* SignupViewController.swift in Sources */,
 				EB01EB9A22DCF34A006DF4ED /* userData.swift in Sources */,
 				EB01EB9D22DCF43C006DF4ED /* String_extension.swift in Sources */,
 				EBF1831A22D2DCF500EC112D /* addLostItemViewController.swift in Sources */,
 				EBC6255822D01928001C83B5 /* AppDelegate.swift in Sources */,
+				EB01EBA122DCF914006DF4ED /* lostItem.swift in Sources */,
 				EB7D450B22DA63A800FD69B2 /* demoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
