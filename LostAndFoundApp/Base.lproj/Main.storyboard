@@ -263,10 +263,6 @@
                                 <rect key="frame" x="95" y="116" width="193" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iM-Ky-0s1">
-                                <rect key="frame" x="20" y="651" width="363" height="184"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="io7-DN-cNk">
                                 <rect key="frame" x="117" y="538" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -310,11 +306,16 @@
                                     <action selector="btn_imagePick:" destination="EZV-hm-Rqq" eventType="touchUpInside" id="r53-Dm-dQk"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iM-Ky-0s1">
+                                <rect key="frame" x="37" y="609" width="363" height="184"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iwo-K9-17O"/>
                     </view>
                     <connections>
+                        <outlet property="categoryPicker" destination="7iM-Ky-0s1" id="7eD-hG-EHq"/>
                         <outlet property="img_item" destination="I63-vm-uBE" id="jDl-LV-cAQ"/>
                         <outlet property="txt_category" destination="2Dd-mb-TNm" id="4B9-z5-92C"/>
                         <outlet property="txt_dateLostItem" destination="WbN-1H-nNm" id="vPE-jz-chc"/>

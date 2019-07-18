@@ -8,9 +8,17 @@
 
 import UIKit
 
-class addLostItemViewController: UIViewController,UIImagePickerControllerDelegate,UIActionSheetDelegate, UIAlertViewDelegate,UINavigationBarDelegate,UINavigationControllerDelegate
+class addLostItemViewController: UIViewController,UIImagePickerControllerDelegate,UIActionSheetDelegate, UIAlertViewDelegate,UINavigationBarDelegate,UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate
 {
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return category.count
+    }
+    
     
     @IBOutlet weak var txt_itemName: UITextField!
     @IBOutlet weak var txt_category: UITextField!
@@ -24,16 +32,22 @@ class addLostItemViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var img_item: UIImageView!
      var imageFlag : Bool = false
     
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return category[row]
+    }
     var imageController = UIImagePickerController()
     var img_dataDic = NSMutableDictionary()
     var parameterDic = NSMutableDictionary()
     var img_data = NSData()
-    
+      var category = ["General", "Electronic", "Materialistic"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!)
         imageController.delegate = self
+        categoryPicker.dataSource = self
+        categoryPicker.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -104,6 +118,7 @@ self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1")!
         self.present(optionMenu, animated: true, completion: nil)
         
     }
+   
     /*
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
